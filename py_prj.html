@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Примеры</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="animate__animated animate__fadeInDown">Python Примеры</h1>
+            <nav>
+                <ul class="nav" >
+                    <li><a href="index.html"><i class="fa-solid fa-house-laptop"></i>Главная</a></li>
+                    <li><a href="html.html"><i class="fab fa-html5"></i> HTML</a></li>
+                    <li><a href="css.html"><i class="fab fa-css3-alt"></i> CSS</a></li>
+                    <li><a href="javascript.html"><i class="fab fa-js-square"></i> JavaScript</a></li>
+                    <li><a href="python.html"><i class="fab fa-python"></i> Python</a></li>
+                    <li class="active"><a href="examples.html"><i class="fas fa-code"></i> Примеры</a></li>
+                    <li><a href="about.html"><i class="fa-solid fa-user"></i> Об авторе</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <section>
+            <h2>Примеры проектов на Python</h2>
+
+            <!-- Проект 1: Простой калькулятор -->
+            <div class="project">
+                <h3>Проект 1: Простой калькулятор</h3>
+                <pre class="code-block">
+
+a = 5
+b = 3
+result = a + b
+print("Результат:", result)  # 8
+
+                </pre>
+                <p>Пример простого калькулятора, который складывает два числа.</p>
+            </div>
+
+            <!-- Проект 2: Функция для приветствия -->
+            <div class="project">
+                <h3>Проект 2: Функция для приветствия</h3>
+                <pre class="code-block">
+
+def greet(name):
+    return f"Привет, {name}!"
+
+print(greet("Мир"))
+
+                </pre>
+                <p>Пример функции, которая принимает имя и возвращает приветственное сообщение.</p>
+            </div>
+
+            <!-- Проект 3: Генератор случайных чисел -->
+            <div class="project">
+                <h3>Проект 3: Генератор случайных чисел</h3>
+                <pre class="code-block">
+
+import random
+
+number = random.randint(1, 100)
+print(f"Случайное число: {number}")
+
+                </pre>
+                <p>Генератор случайных чисел в диапазоне от 1 до 100.</p>
+            </div>
+
+            <!-- Проект 4: Игра "Угадай число" -->
+            <div class="project">
+                <h3>Проект 4: Игра "Угадай число"</h3>
+                <pre class="code-block">
+
+import random
+
+secret_number = random.randint(1, 10)
+guess = int(input("Угадайте число от 1 до 10: "))
+
+if guess == secret_number:
+    print("Вы угадали!")
+else:
+    print("Попробуйте снова!")
+
+                </pre>
+                <p>Простая игра, в которой нужно угадать случайное число от 1 до 10.</p>
+            </div>
+
+            <!-- Проект 5: Чтение и запись в файл -->
+            <div class="project">
+                <h3>Проект 5: Чтение и запись в файл</h3>
+                <pre class="code-block">
+
+# Запись в файл
+with open("file.txt", "w") as file:
+    file.write("Hello, Python!")
+
+# Чтение из файла
+with open("file.txt", "r") as file:
+    content = file.read()
+    print(content)
+
+                </pre>
+                <p>Пример записи в файл и его последующего чтения.</p>
+            </div>
+
+            <!-- Проект 6: Простой веб-сервер на Flask -->
+            <div class="project">
+                <h3>Проект 6: Простой веб-сервер на Flask</h3>
+                <pre class="code-block">
+
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+    return "Привет, мир!"
+
+if __name__ == "__main__":
+    app.run()
+
+                </pre>
+                <p>Простой веб-сервер, который отвечает "Привет, мир!" при обращении к корневому маршруту.</p>
+            </div>
+
+            <!-- Проект 7: Парсер данных с использованием BeautifulSoup -->
+            <div class="project">
+                <h3>Проект 7: Парсер данных с использованием BeautifulSoup</h3>
+                <pre class="code-block">
+
+import requests
+from bs4 import BeautifulSoup
+
+url = "https://example.com"
+response = requests.get(url)
+soup = BeautifulSoup(response.text, "html.parser")
+
+# Найти все ссылки на странице
+links = soup.find_all("a")
+for link in links:
+    print(link.get("href"))
+
+                </pre>
+                <p>Пример парсинга данных с веб-страницы и извлечения всех ссылок.</p>
+            </div>
+
+            <!-- Проект 8: Калькулятор с графическим интерфейсом на Tkinter -->
+            <div class="project">
+                <h3>Проект 8: Калькулятор с графическим интерфейсом на Tkinter</h3>
+                <pre class="code-block">
+
+import tkinter as tk
+
+def add():
+    result.set(float(entry1.get()) + float(entry2.get()))
+
+window = tk.Tk()
+
+entry1 = tk.Entry(window)
+entry1.pack()
+
+entry2 = tk.Entry(window)
+entry2.pack()
+
+result = tk.StringVar()
+label = tk.Label(window, textvariable=result)
+label.pack()
+
+button = tk.Button(window, text="Сложить", command=add)
+button.pack()
+
+window.mainloop()
+
+                </pre>
+                <p>Пример простого калькулятора с графическим интерфейсом, использующий Tkinter.</p>
+            </div>
+
+            <!-- Проект 9: Программа для управления задачами -->
+            <div class="project">
+                <h3>Проект 9: Программа для управления задачами (ToDo List)</h3>
+                <pre class="code-block">
+
+tasks = []
+
+def add_task(task):
+    tasks.append(task)
+
+def show_tasks():
+    for task in tasks:
+        print(task)
+
+add_task("Купить продукты")
+add_task("Написать отчет")
+
+show_tasks()
+
+                </pre>
+                <p>Пример программы для отслеживания задач с добавлением и выводом списка задач.</p>
+            </div>
+
+            <!-- Проект 10: Простой чат-бот на Telegram -->
+            <div class="project">
+                <h3>Проект 10: Простой чат-бот на Telegram</h3>
+                <pre class="code-block">
+
+import telegram
+
+bot = telegram.Bot(token="YOUR_API_KEY")
+
+updates = bot.get_updates()
+for update in updates:
+    print(update.message.text)
+
+                </pre>
+                <p>Простой чат-бот для Telegram, который выводит текст сообщений пользователей.</p>
+            </div>
+
+            <div class="back-button">
+                <a href="examples.html"><button>Назад</button></a>
+            </div>
+            <div class="back-button">
+                <a href="index.html"><button>На Главную</button></a>
+            </div>
+        </section>
+    </main>
+        <!-- Кнопка "Вернуться наверх" -->
+<button id="scrollToTopBtn" class="scroll-to-top">
+    <i class="fa-solid fa-chevron-up"></i>
+</button>
+    <footer>   
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>

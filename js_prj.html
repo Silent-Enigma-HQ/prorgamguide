@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Примеры</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="animate__animated animate__fadeInDown">JavaScript Примеры</h1>
+            <nav>
+                <ul class="nav" >
+                    <li><a href="index.html"><i class="fa-solid fa-house-laptop"></i>Главная</a></li>
+                    <li><a href="html.html"><i class="fab fa-html5"></i> HTML</a></li>
+                    <li><a href="css.html"><i class="fab fa-css3-alt"></i> CSS</a></li>
+                    <li><a href="javascript.html"><i class="fab fa-js-square"></i> JavaScript</a></li>
+                    <li><a href="python.html"><i class="fab fa-python"></i> Python</a></li>
+                    <li class="active"><a href="examples.html"><i class="fas fa-code"></i> Примеры</a></li>
+                    <li><a href="about.html"><i class="fa-solid fa-user"></i> Об авторе</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>Примеры проектов на JavaScript</h2>
+
+            <div class="project">
+                <h3>Проект 1: Простой калькулятор</h3>
+                <pre class="code-block">
+
+function add(a, b) {
+    return a + b;
+}
+
+let result = add(5, 3);
+console.log(result);  // 8
+
+                </pre>
+                <p>Пример простого калькулятора, который складывает два числа.</p>
+            </div>
+
+            <div class="project">
+                <h3>Проект 2: Список задач (To-Do List)</h3>
+                <pre class="code-block">
+
+let tasks = [];
+
+function addTask(task) {
+    tasks.push(task);
+    console.log("Задача добавлена:", task);
+}
+
+function removeTask(task) {
+    tasks = tasks.filter(t => t !== task);
+    console.log("Задача удалена:", task);
+}
+
+addTask("Почитать книгу");
+removeTask("Почитать книгу");
+
+                </pre>
+                <p>Пример списка задач, где можно добавлять и удалять задачи.</p>
+            </div>
+
+            <div class="project">
+                <h3>Проект 3: Игра "Крестики-нолики"</h3>
+                <pre class="code-block">
+
+const board = [
+    [' ', ' ', ' '],
+    [' ', ' ', ' '],
+    [' ', ' ', ' ']
+];
+
+function makeMove(row, col, player) {
+    if (board[row][col] === ' ') {
+        board[row][col] = player;
+        console.log(board);
+    } else {
+        console.log("Это место уже занято.");
+    }
+}
+
+makeMove(0, 0, 'X');
+makeMove(0, 1, 'O');
+
+                </pre>
+                <p>Пример игры "Крестики-нолики" для двух игроков.</p>
+            </div>
+
+            <div class="project">
+                <h3>Проект 4: Часы с обратным отсчетом</h3>
+                <pre class="code-block">
+
+let countdown = 10;
+
+function startCountdown() {
+    const timer = setInterval(() => {
+        console.log(countdown);
+        countdown--;
+        if (countdown < 0) {
+            clearInterval(timer);
+            console.log("Время вышло!");
+        }
+    }, 1000);
+}
+
+startCountdown();
+
+                </pre>
+                <p>Пример таймера с обратным отсчетом.</p>
+            </div>
+
+            <div class="project">
+                <h3>Проект 5: Генератор случайных цитат</h3>
+                <pre class="code-block">
+
+const quotes = [
+    "Жизнь — это то, что с нами происходит, пока мы строим планы.",
+    "Будь собой; все остальные роли уже заняты.",
+    "Не бойся совершенства — тебе его не достичь."
+];
+
+function getRandomQuote() {
+    const index = Math.floor(Math.random() * quotes.length);
+    console.log(quotes[index]);
+}
+
+getRandomQuote();
+
+                </pre>
+                <p>Пример генератора случайных цитат.</p>
+            </div>
+
+            <div class="project">
+                <h3>Проект 6: Курс валют (с API)</h3>
+                <pre class="code-block">
+
+fetch('https://api.exchangerate-api.com/v4/latest/USD')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data.rates.EUR);  // Курс USD к EUR
+    })
+    .catch(error => console.log("Ошибка:", error));
+
+                </pre>
+                <p>Пример получения курса валют с внешнего API.</p>
+            </div>
+
+            <div class="project">
+                <h3>Проект 7: Магазин с фильтрами</h3>
+                <pre class="code-block">
+
+const products = [
+    { name: 'Молоко', category: 'Продукты', price: 50 },
+    { name: 'Телефон', category: 'Электроника', price: 30000 },
+    { name: 'Книга', category: 'Книги', price: 500 }
+];
+
+function filterProducts(category) {
+    return products.filter(product => product.category === category);
+}
+
+console.log(filterProducts('Электроника'));
+
+                </pre>
+                <p>Пример интернет-магазина с фильтрами товаров по категориям.</p>
+            </div>
+
+            <div class="project">
+                <h3>Проект 8: Погода (с API)</h3>
+                <pre class="code-block">
+
+fetch('https://api.openweathermap.org/data/2.5/weather?q=London&appid=your_api_key')
+    .then(response => response.json())
+    .then(data => {
+        console.log(data.weather[0].description);  // Погода в Лондоне
+    })
+    .catch(error => console.log("Ошибка:", error));
+
+                </pre>
+                <p>Пример получения информации о текущей погоде через API.</p>
+            </div>
+
+            <div class="project">
+                <h3>Проект 9: Визуализатор данных (графики)</h3>
+                <pre class="code-block">
+
+const data = [10, 20, 30, 40];
+const labels = ['Январь', 'Февраль', 'Март', 'Апрель'];
+
+const ctx = document.getElementById('chart').getContext('2d');
+const chart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: labels,
+        datasets: [{
+            label: 'Продажи',
+            data: data
+        }]
+    }
+});
+
+                </pre>
+                <p>Пример визуализации данных с использованием библиотеки Chart.js.</p>
+            </div>
+
+            <div class="project">
+                <h3>Проект 10: Простой блог</h3>
+                <pre class="code-block" >
+
+let posts = [];
+
+function createPost(title, content) {
+    posts.push({ title, content });
+    console.log("Пост создан:", title);
+}
+
+createPost("Мой первый пост", "Это мой первый пост на блоге.");
+
+                </pre>
+                <p>Пример простого блога с созданием постов.</p>
+            </div>
+
+            <div class="project">
+                <h3>Проект 11: Шахматы</h3>
+                <pre class="code-block">
+
+const board = [
+    ['R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R'],
+    ['P', 'P', 'P', 'P', 'P', 'P', 'P', 'P'],
+    [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+    [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+    [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+    [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '],
+    ['p', 'p', 'p', 'p', 'p', 'p', 'p', 'p'],
+    ['r', 'n', 'b', 'q', 'k', 'b', 'n', 'r']
+];
+
+function movePiece(from, to) {
+    const [fromRow, fromCol] = from;
+    const [toRow, toCol] = to;
+    const piece = board[fromRow][fromCol];
+    board[toRow][toCol] = piece;
+    board[fromRow][fromCol] = ' ';
+    console.log(board);
+}
+
+movePiece([6, 4], [4, 4]);
+
+                </pre>
+                <p>Пример шахматной игры с перемещением фигур.</p>
+            </div>
+
+            <div class="project">
+                <h3>Проект 12: Конвертер единиц</h3>
+                <pre class="code-block">
+
+function convertLength(value, unit) {
+    if (unit === 'meters') {
+        return value * 100;
+    } else if (unit === 'centimeters') {
+        return value / 100;
+    }
+}
+
+console.log(convertLength(1, 'meters'));  // 100
+console.log(convertLength(100, 'centimeters'));  // 1
+
+                </pre>
+                <p>Пример конвертера единиц измерения.</p>
+            </div>
+
+            <div class="project">
+                <h3>Проект 13: Тестирование на скорость набора текста</h3>
+                <pre class="code-block">
+
+const textToType = "Пример текста для набора.";
+let startTime;
+
+function startTypingTest() {
+    startTime = Date.now();
+    console.log("Начни набирать текст:");
+}
+
+function endTypingTest(inputText) {
+    const endTime = Date.now();
+    const timeTaken = (endTime - startTime) / 1000;
+    console.log(`Время: ${timeTaken} секунд.`);
+}
+
+startTypingTest();
+// Вызывайте endTypingTest, когда пользователь закончит набор текста
+
+                </pre>
+                <p>Пример теста на скорость набора текста.</p>
+            </div>
+
+            <div class="project">
+                <h3>Проект 14: Секретное сообщение</h3>
+                <pre class="code-block">
+
+function encryptMessage(message) {
+    return message.split('').reverse().join('');
+}
+
+console.log(encryptMessage("Привет мир!"));  // !рим тевирП
+
+                </pre>
+                <p>Пример шифрования текста с использованием простого алгоритма.</p>
+            </div>
+
+            <div class="project">
+                <h3>Проект 15: Карта (Google Maps API)</h3>
+                <pre class="code-block">
+
+function initMap() {
+    const map = new google.maps.Map(document.getElementById("map"), {
+        center: { lat: -34.397, lng: 150.644 },
+        zoom: 8
+    });
+}
+
+                </pre>
+                <p>Пример интеграции Google Maps на веб-странице.</p>
+            </div>
+
+            <div class="back-button">
+                <a href="examples.html"><button>Назад</button></a>
+            </div>
+            <div class="back-button">
+                <a href="index.html"><button>На Главную</button></a>
+            </div>
+        </section>
+    </main>
+        <!-- Кнопка "Вернуться наверх" -->
+<button id="scrollToTopBtn" class="scroll-to-top">
+    <i class="fa-solid fa-chevron-up"></i>
+</button>
+    <footer>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

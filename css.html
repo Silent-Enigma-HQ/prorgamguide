@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основы CSS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="animate__animated animate__fadeInDown">Основы CSS</h1>
+            <nav>
+                <ul class="nav">
+                    <li><a href="index.html"><i class="fa-solid fa-house-laptop"></i>Главная</a></li>
+                    <li><a href="html.html"><i class="fab fa-html5"></i> HTML</a></li>
+                    <li class="active"><a href="css.html"><i class="fab fa-css3-alt"></i> CSS</a></li>
+                    <li><a href="javascript.html"><i class="fab fa-js-square"></i> JavaScript</a></li>
+                    <li><a href="python.html"><i class="fab fa-python"></i> Python</a></li>
+                    <li><a href="examples.html"><i class="fas fa-code"></i> Примеры</a></li>
+                    <li><a href="about.html"><i class="fa-solid fa-user"></i> Об авторе</a></li>
+                </ul>
+            </nav> 
+        </div>
+    </header>
+    <main class="container">
+
+            <h2>Что такое CSS?</h2>
+            <p>CSS (Cascading Style Sheets) используется для оформления веб-страниц: цвета, шрифты, расположение блоков и т.д. CSS позволяет отделить структуру веб-страницы от её оформления, создавая более гибкий и удобный код.</p>
+
+            <h2>Основные понятия CSS</h2>
+            <ul>
+                <li><strong>Селекторы</strong> — определяют, к каким элементам применяется стиль.</li>
+                <li><strong>Свойства и значения</strong> — каждое правило CSS состоит из свойства и его значения. Например, <code>color: red;</code>.</li>
+                <li><strong>Каскадирование и наследование</strong> — правила каскадируются, то есть, если два правила применяются к одному элементу, то применяется последнее по порядку, если не указано иначе.</li>
+                <li><strong>Приоритеты правил</strong> — правила с более специфичными селекторами имеют больший приоритет.</li>
+            </ul>
+
+            <h2>Основные свойства CSS</h2>
+            <ul>
+                <li><strong>Шрифты:</strong> можно изменить тип шрифта, размер и толщину. Пример: <code>font-family: Arial, sans-serif;</code></li>
+                <li><strong>Цвета и фоны:</strong> для изменения цвета текста и фона. Пример: <code>background-color: #f0f0f0;</code></li>
+                <li><strong>Модели блочных элементов:</strong> каждая область на странице (блок) имеет отступы (margin), рамки (border), внутренние отступы (padding).</li>
+                <li><strong>Позиционирование:</strong> позволяет задавать точное расположение элементов. Пример: <code>position: absolute;</code></li>
+            </ul>
+
+            <h2>Сеточные системы и выравнивание</h2>
+            <p>С помощью Flexbox и CSS Grid можно создавать сложные макеты и выравнивать элементы на странице.</p>
+            <ul>
+                <li><strong>Flexbox:</strong> используется для выравнивания элементов по горизонтали или вертикали.</li>
+                <li><strong>CSS Grid:</strong> позволяет создавать сетку для более сложных макетов с несколькими колонками и строками.</li>
+            </ul>
+
+            <h2>Медиа-запросы и адаптивный дизайн</h2>
+            <p>Медиа-запросы позволяют создавать страницы, которые адаптируются под различные устройства (например, мобильные телефоны, планшеты, компьютеры).</p>
+            <pre>
+
+@media screen and (max-width: 768px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
+            </pre>
+
+            <h2>Трансформации и анимации</h2>
+            <ul>
+                <li><strong>CSS-трансформации:</strong> позволяют изменять элементы на странице (поворот, масштабирование, перемещение).</li>
+                <li><strong>CSS-анимирование:</strong> можно задавать анимации для различных свойств, таких как прозрачность, положение и другие.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Пример кода</h2>
+            <p>Вот пример базового CSS-кода для стилизации страницы:</p>
+            <pre>
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+h1 {
+    color: #4a90e2;
+    text-align: center;
+}
+
+            </pre>
+
+            <h2>Пример кода с Flexbox</h2>
+            <p>Вот пример использования Flexbox для выравнивания элементов по горизонтали и вертикали:</p>
+            <pre>
+
+.container {
+    display: flex;
+    justify-content: center; /* Выравнивание по горизонтали */
+    align-items: center; /* Выравнивание по вертикали */
+    height: 100vh;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #4a90e2;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+</pre>
+
+            <h2>Практические примеры</h2>
+            <ul>
+                <li><strong>Стилизация кнопки:</strong> можно добавить стили для кнопок, чтобы они выглядели более привлекательными.</li>
+                <li><strong>Стилизация карточек:</strong> с помощью CSS можно создать красивые карточки с изображениями и текстом.</li>
+                <li><strong>Навигационное меню:</strong> пример горизонтального меню с использованием CSS.</li>
+            </ul>
+
+            <h2>Задания и упражнения</h2>
+            <p>Попробуйте создать свой адаптивный сайт, используя медиа-запросы, а также примените Flexbox для выравнивания элементов.</p>
+
+            <h2>Инструменты и ресурсы</h2>
+            <ul>
+                <li><a href="https://codepen.io" target="_blank">CodePen</a> — онлайн-редактор для работы с CSS и другими технологиями.</li>
+                <li><a href="https://developer.mozilla.org/ru/docs/Web/CSS" target="_blank">MDN Web Docs</a> — официальная документация по CSS.</li>
+                <li><a href="https://css-tricks.com" target="_blank">CSS-Tricks</a> — сайт с множеством полезных статей и примеров по CSS.</li>
+            </ul>
+
+            <h2>Часто встречающиеся ошибки</h2>
+            <ul>
+                <li><strong>Забытые точки с запятой:</strong> всегда завершаем строки свойств точкой с запятой.</li>
+                <li><strong>Неправильные значения свойств:</strong> например, неправильный цвет или размер шрифта.</li>
+                <li><strong>Ошибки при использовании селекторов:</strong> неправильное использование классов и id.</li>
+                <li><strong>Проблемы с адаптивностью:</strong> элементы могут не подстраиваться под различные размеры экранов.</li>
+            </ul>
+
+    </main>
+    <div class="back-button">
+        <a href="index.html"><button>На Главную</button></a>
+    </div>
+        <!-- Кнопка "Вернуться наверх" -->
+<button id="scrollToTopBtn" class="scroll-to-top">
+    <i class="fa-solid fa-chevron-up"></i>
+</button>
+    <footer>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>

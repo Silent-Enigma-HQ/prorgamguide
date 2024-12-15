@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Примеры</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="animate__animated animate__fadeInDown">HTML Примеры</h1>
+            <nav>
+                <ul class="nav" >
+                    <li><a href="index.html"><i class="fa-solid fa-house-laptop"></i>Главная</a></li>
+                    <li><a href="html.html"><i class="fab fa-html5"></i> HTML</a></li>
+                    <li><a href="css.html"><i class="fab fa-css3-alt"></i> CSS</a></li>
+                    <li><a href="javascript.html"><i class="fab fa-js-square"></i> JavaScript</a></li>
+                    <li><a href="python.html"><i class="fab fa-python"></i> Python</a></li>
+                    <li class="active"><a href="examples.html"><i class="fas fa-code"></i> Примеры</a></li>
+                    <li><a href="about.html"><i class="fa-solid fa-user"></i> Об авторе</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <section>
+            <h2>Примеры проектов на HTML</h2>
+
+            <!-- Проект 1: Простая веб-страница -->
+            <div class="project">
+                <h3>Проект 1: Простая веб-страница</h3>
+                <pre class="code-block">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Простая веб-страница&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Привет, мир!&lt;/h1&gt;
+    &lt;p&gt;Это простая веб-страница.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+                </pre>
+                <p>Пример создания базовой HTML-страницы.</p>
+            </div>
+
+            <!-- Проект 2: Формы для ввода данных -->
+            <div class="project">
+                <h3>Проект 2: Форма ввода данных</h3>
+                <pre class="code-block">
+
+&lt;form&gt;
+    &lt;label for="name"&gt;Ваше имя:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;&lt;br&gt;
+    &lt;label for="email"&gt;Ваш email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"&gt;&lt;br&gt;
+    &lt;input type="submit" value="Отправить"&gt;
+&lt;/form&gt;
+
+                </pre>
+                <p>Пример создания простой формы ввода данных.</p>
+            </div>
+
+            <!-- Проект 3: Вставка изображения -->
+            <div class="project">
+                <h3>Проект 3: Вставка изображения</h3>
+                <pre class="code-block">
+
+&lt;img src="image.jpg" alt="Описание изображения"&gt;
+
+                </pre>
+                <p>Пример вставки изображения на веб-страницу с атрибутами <code>src</code> и <code>alt</code>.</p>
+            </div>
+
+            <!-- Проект 4: Встраивание видео -->
+            <div class="project">
+                <h3>Проект 4: Встраивание видео</h3>
+                <pre class="code-block">
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+                </pre>
+                <p>Пример встраивания видео с YouTube на страницу.</p>
+            </div>
+
+            <!-- Проект 5: Персональный сайт -->
+            <div class="project">
+                <h3>Проект 5: Персональный сайт</h3>
+                <pre class="code-block">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Мой личный сайт&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Привет, я [Ваше имя]!&lt;/h1&gt;
+    &lt;section&gt;
+        &lt;h2&gt;О себе&lt;/h2&gt;
+        &lt;p&gt;Я веб-разработчик с опытом работы в HTML, CSS и JavaScript.&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;h2&gt;Контакты&lt;/h2&gt;
+        &lt;p&gt;Email: [ваш email]</p&gt;
+    &lt;/section&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+                </pre>
+                <p>Простой сайт для представления информации о себе.</p>
+            </div>
+
+            <!-- Проект 6: Онлайн-портфолио -->
+            <div class="project">
+                <h3>Проект 6: Онлайн-портфолио</h3>
+                <pre class="code-block">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Мое портфолио&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Мое портфолио&lt;/h1&gt;
+    &lt;section&gt;
+        &lt;h2&gt;Проект 1&lt;/h2&gt;
+        &lt;p&gt;Описание проекта 1&lt;/p&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;h2&gt;Проект 2&lt;/h2&gt;
+        &lt;p&gt;Описание проекта 2&lt;/p&gt;
+    &lt;/section&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+                </pre>
+                <p>Сайт для представления своих проектов и работ.</p>
+            </div>
+
+            <!-- Проект 7: Блог -->
+            <div class="project">
+                <h3>Проект 7: Блог</h3>
+                <pre class="code-block">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Мой блог&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Мой блог&lt;/h1&gt;
+    &lt;article&gt;
+        &lt;h2&gt;Пост 1&lt;/h2&gt;
+        &lt;p&gt;Описание поста 1&lt;/p&gt;
+    &lt;/article&gt;
+    &lt;article&gt;
+        &lt;h2&gt;Пост 2&lt;/h2&gt;
+        &lt;p&gt;Описание поста 2&lt;/p&gt;
+    &lt;/article&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+                </pre>
+                <p>Простой блог для публикации постов.</p>
+            </div>
+
+            <!-- Проект 8: Лендинг-пейдж -->
+            <div class="project">
+                <h3>Проект 8: Лендинг-пейдж</h3>
+                <pre class="code-block">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Лендинг-пейдж&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Продаем лучший продукт&lt;/h1&gt;
+    &lt;p&gt;Преимущества нашего продукта:&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;Качество&lt;/li&gt;
+        &lt;li&gt;Цена&lt;/li&gt;
+        &lt;li&gt;Отзывы&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;button&gt;Купить сейчас&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+                </pre>
+                <p>Одностраничный сайт для рекламы продукта.</p>
+            </div>
+
+            <!-- Проект 9: Визитка -->
+            <div class="project">
+                <h3>Проект 9: Визитка</h3>
+                <pre class="code-block">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Моя визитка&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Имя Фамилия&lt;/h1&gt;
+    &lt;p&gt;Профессия: Веб-разработчик&lt;/p&gt;
+    &lt;p&gt;Email: [ваш email]&lt;/p&gt;
+    &lt;p&gt;Телефон: [ваш номер]&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+                </pre>
+                <p>Простой сайт-визитка с контактной информацией.</p>
+            </div>
+
+            <!-- Проект 10: Ресторанный сайт -->
+            <div class="project">
+                <h3>Проект 10: Ресторанный сайт</h3>
+                <pre class="code-block">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Меню ресторана&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Меню ресторана&lt;/h1&gt;
+    &lt;h2&gt;Супы&lt;/h2&gt;
+    &lt;p&gt;Суп томатный - 250 рублей&lt;/p&gt;
+    &lt;h2&gt;Основные блюда&lt;/h2&gt;
+    &lt;p&gt;Стейк с картошкой - 500 рублей&lt;/p&gt;
+    &lt;form&gt;
+        &lt;label for="reservation"&gt;Забронировать стол&lt;/label&gt;
+        &lt;input type="date" id="reservation"&gt;
+        &lt;input type="submit" value="Забронировать"&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+                </pre>
+                <p>Сайт ресторана с меню и возможностью бронирования стола.</p>
+            </div>
+
+            <div class="back-button">
+                <a href="examples.html"><button>Назад</button></a>
+            </div>
+            <div class="back-button">
+                <a href="index.html"><button>На Главную</button></a>
+            </div>
+        </section>
+    </main>
+        <!-- Кнопка "Вернуться наверх" -->
+<button id="scrollToTopBtn" class="scroll-to-top">
+    <i class="fa-solid fa-chevron-up"></i>
+</button>
+    <footer>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>

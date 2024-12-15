@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основы HTML</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="animate__animated animate__fadeInDown">Основы HTML</h1>
+            <nav>
+                <ul class="nav">
+                    <li><a href="index.html"><i class="fa-solid fa-house-laptop"></i>Главная</a></li>
+                    <li class="active"><a href="html.html"><i class="fab fa-html5"></i> HTML</a></li>
+                    <li><a href="css.html"><i class="fab fa-css3-alt"></i> CSS</a></li>
+                    <li><a href="javascript.html"><i class="fab fa-js-square"></i> JavaScript</a></li>
+                    <li><a href="python.html"><i class="fab fa-python"></i> Python</a></li>
+                    <li><a href="examples.html"><i class="fas fa-code"></i> Примеры</a></li>
+                    <li><a href="about.html"><i class="fa-solid fa-user"></i> Об авторе</a></li>
+                </ul>
+            </nav> 
+        </div>
+    </header>
+    <main class="container">
+        <h2>Что такое HTML?</h2>
+        <p>HTML (HyperText Markup Language) — это язык разметки, используемый для создания веб-страниц. Он описывает структуру контента и позволяет браузерам отображать текст, изображения, ссылки и другие элементы.</p>
+        <p>Пример простого HTML-документа:</p>
+        <pre>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Пример страницы&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Добро пожаловать!&lt;/h1&gt;
+    &lt;p&gt;Это мой первый веб-сайт.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+        <h2>Основная структура HTML-документа</h2>
+        <p>Каждая HTML-страница имеет следующую базовую структуру:</p>
+        <ul>
+            <li><code>&lt;!DOCTYPE html&gt;</code>: определяет тип документа.</li>
+            <li><code>&lt;html&gt;</code>: корневой элемент страницы.</li>
+            <li><code>&lt;head&gt;</code>: содержит метаданные.</li>
+            <li><code>&lt;body&gt;</code>: видимая часть страницы.</li>
+        </ul>
+
+        <h2>Основные теги HTML</h2>
+        <p>Некоторые из самых используемых тегов в HTML:</p>
+        <ul>
+            <li><code>&lt;h1&gt;-&lt;h6&gt;</code>: заголовки.</li>
+            <li><code>&lt;p&gt;</code>: абзацы текста.</li>
+            <li><code>&lt;a&gt;</code>: ссылки.</li>
+            <li><code>&lt;img&gt;</code>: изображения.</li>
+            <li><code>&lt;ul&gt;</code> и <code>&lt;ol&gt;</code>: списки.</li>
+        </ul>
+
+        <h2>Семантические теги HTML5</h2>
+        <p>В HTML5 появились семантические теги, которые помогают структурировать страницы и улучшать SEO. Примеры таких тегов:</p>
+        <ul>
+            <li><code>&lt;header&gt;</code>: заголовок страницы или раздела.</li>
+            <li><code>&lt;footer&gt;</code>: нижний колонтитул.</li>
+            <li><code>&lt;article&gt;</code>: независимая статья или контент.</li>
+            <li><code>&lt;section&gt;</code>: раздел, который может содержать несколько блоков контента.</li>
+            <li><code>&lt;nav&gt;</code>: блок для навигации.</li>
+        </ul>
+
+        <h2>Интернационализация и локализация</h2>
+        <p>Чтобы указать язык страницы, используется атрибут <code>lang</code> в теге <code>&lt;html&gt;</code>. Например, для русскоязычной страницы:</p>
+        <pre>&lt;html lang="ru"&gt;</pre>
+
+        <h2>Мета-теги для SEO</h2>
+        <p>Мета-теги помогают улучшить поисковую оптимизацию страницы. Пример использования мета-тегов:</p>
+        <pre>>&lt;meta name="description" content="Гид по программированию. Основы HTML и веб-разработки."&gt;
+&lt;meta name="keywords" content="HTML, веб-разработка, основы программирования, сайт, код"&gt;</pre>
+
+        <h2>Ссылки и атрибуты для улучшения взаимодействия с пользователем</h2>
+        <p>Для открытия ссылки в новой вкладке используйте атрибут <code>target="_blank"</code>:</p>
+        <pre>&lt;a href="https://example.com" target="_blank"&gt;Перейти на Example&lt;/a&gt;</pre>
+
+        <h2>Адаптивный веб-дизайн</h2>
+        <p>Для создания адаптивных страниц используйте медиазапросы CSS. Пример медиазапроса для изменения фона на мобильных устройствах:</p>
+        <pre>@media (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+}</pre>
+
+        <h2>Формы в HTML</h2>
+        <p>Создайте форму с полями для ввода и кнопкой:</p>
+        <pre>&lt;form action="/submit" method="POST"&gt;
+    &lt;label for="name"&gt;Имя:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name" required&gt;
+
+    &lt;label for="email"&gt;Электронная почта:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required&gt;
+
+    &lt;button type="submit"&gt;Отправить&lt;/button&gt;
+&lt;/form&gt;</pre>
+
+        <h2>Безопасность в HTML</h2>
+        <p>Для обеспечения безопасности используйте атрибуты <code>rel="noopener noreferrer"</code> в ссылках, которые открываются в новой вкладке:</p>
+        <pre>&lt;a href="https://example.com" target="_blank" rel="noopener noreferrer"&gt;Безопасная ссылка&lt;/a&gt;</pre>
+
+        <h2>Введение в динамическое поведение с помощью JavaScript</h2>
+        <p>Для добавления динамического поведения используйте JavaScript. Пример кнопки, которая выводит сообщение при клике:</p>
+        <pre>&lt;button onclick="alert('Привет, мир!')"&gt;Нажми на меня&lt;/button&gt;</pre>
+
+    </main>
+    <div class="back-button">
+        <a href="index.html"><button>На Главную</button></a>
+    </div>
+        <!-- Кнопка "Вернуться наверх" -->
+<button id="scrollToTopBtn" class="scroll-to-top">
+    <i class="fa-solid fa-chevron-up"></i>
+</button>
+    <footer>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

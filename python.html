@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основы Python</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="animate__animated animate__fadeInDown">Основы Python</h1>
+            <nav>
+                <ul class="nav">
+                    <li><a href="index.html"><i class="fa-solid fa-house-laptop"></i>Главная</a></li>
+                    <li><a href="html.html"><i class="fab fa-html5"></i> HTML</a></li>
+                    <li><a href="css.html"><i class="fab fa-css3-alt"></i> CSS</a></li>
+                    <li><a href="javascript.html"><i class="fab fa-js-square"></i> JavaScript</a></li>
+                    <li class="active"><a href="python.html"><i class="fab fa-python"></i> Python</a></li>
+                    <li><a href="examples.html"><i class="fas fa-code"></i> Примеры</a></li>
+                    <li><a href="about.html"><i class="fa-solid fa-user"></i> Об авторе</a></li>
+                </ul>
+            </nav> 
+        </div>
+    </header>
+    <main class="container">
+        <section>
+            <h2>Что такое Python?</h2>
+            <p>Python — это высокоуровневый язык программирования, известный своей простотой и читаемостью.</p>
+            <p>Он широко используется в разных областях, от веб-разработки до анализа данных и машинного обучения.</p>
+        </section>
+        
+        <section>
+            <h2>Как установить Python</h2>
+            <p>Для начала работы с Python, его необходимо установить на вашем компьютере.</p>
+            <ul>
+                <li>Зайдите на <a href="https://www.python.org/downloads/" target="_blank">официальный сайт Python</a> и выберите версию для вашей операционной системы (Windows, macOS, Linux).</li>
+                <li>Установите Python, следуя инструкциям на экране.</li>
+                <li>Для удобства работы можно установить IDE, например, <a href="https://www.jetbrains.com/pycharm/" target="_blank">PyCharm</a> или <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Первая программа на Python</h2>
+            <p>После установки Python, можно написать свою первую программу, которая выведет строку на экран.</p>
+            <pre>
+
+# Это комментарий
+print("Привет, мир!")
+
+            </pre>
+        </section>
+
+        <section>
+            <h2>Основные типы данных в Python</h2>
+            <p>Python поддерживает несколько базовых типов данных:</p>
+            <ul>
+                <li><strong>Числа:</strong> целые числа и числа с плавающей точкой (например, <code>5</code>, <code>3.14</code>).</li>
+                <li><strong>Строки:</strong> последовательности символов, заключенные в кавычки (например, <code>"Python"</code>).</li>
+                <li><strong>Списки:</strong> упорядоченные коллекции элементов (например, <code>[1, 2, 3]</code>).</li>
+                <li><strong>Словари:</strong> коллекции пар "ключ-значение" (например, <code>{"name": "Alice", "age": 25}</code>).</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Переменные и операторы</h2>
+            <p>Переменные в Python используются для хранения значений, которые можно изменять и использовать в различных операциях.</p>
+            <p>Пример:</p>
+            <pre>
+
+a = 5
+b = 10
+print(a + b)  # Результат: 15
+
+            </pre>
+        </section>
+
+        <section>
+            <h2>Условия и циклы</h2>
+            <p>В Python можно использовать условные операторы для принятия решений:</p>
+            <pre>
+
+if a > b:
+    print("a больше b")
+else:
+    print("a не больше b")
+
+            </pre>
+            <p>Также доступны циклы, например, цикл <code>for</code> для перебора элементов в коллекции:</p>
+            <pre>
+
+for i in range(5):
+    print(i)  # Выведет числа от 0 до 4
+
+            </pre>
+        </section>
+
+        <section>
+            <h2>Функции</h2>
+            <p>Функции позволяют организовать код и повторно использовать его.</p>
+            <pre>
+
+def greet(name):
+    print("Привет, " + name + "!")
+
+greet("Иван")  # Выведет: Привет, Иван!
+
+            </pre>
+        </section>
+
+        <section>
+            <h2>Ошибки и исключения</h2>
+            <p>Иногда в процессе работы с программой могут возникать ошибки. Python позволяет их обрабатывать с помощью блока <code>try-except</code>.</p>
+            <pre>
+
+try:
+    x = 10 / 0
+except ZeroDivisionError:
+    print("Невозможно разделить на ноль")
+
+            </pre>
+        </section>
+
+        <section>
+            <h2>Работа с файлами</h2>
+            <p>Python позволяет работать с файлами, например, читать и записывать данные в текстовые файлы.</p>
+            <pre>
+
+with open("example.txt", "w") as file:
+    file.write("Привет, Python!")
+
+            </pre>
+        </section>
+
+        <section>
+            <h2>Основы ООП в Python</h2>
+            <p>Python поддерживает объектно-ориентированное программирование. Вот пример создания класса:</p>
+            <pre>
+
+class Dog:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def speak(self):
+        return f"{self.name} говорит гав!"
+
+dog = Dog("Бобик", 3)
+print(dog.speak())  # Выведет: Бобик говорит гав!
+
+            </pre>
+        </section>
+
+        <section>
+            <h2>Ресурсы для дальнейшего изучения</h2>
+            <p>Чтобы продолжить изучение Python, воспользуйтесь следующими ресурсами:</p>
+            <ul>
+                <li><a href="https://docs.python.org/3/" target="_blank">Официальная документация Python</a></li>
+                <li><a href="https://www.learnpython.org/" target="_blank">Учебник по Python</a></li>
+                <li><a href="https://www.codecademy.com/learn/learn-python-3" target="_blank">Курс Python на Codecademy</a></li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Часто задаваемые вопросы (FAQ)</h2>
+            <p>Вопросы и ответы на распространенные проблемы при изучении Python.</p>
+            <ul>
+                <li><strong>Как установить Python?</strong> Смотрите раздел "Как установить Python".</li>
+                <li><strong>Как начать писать код?</strong> Следуйте урокам на этой странице.</li>
+            </ul>
+        </section>
+    </main>
+    <div class="back-button">
+        <a href="index.html"><button>На Главную</button></a>
+    </div>
+        <!-- Кнопка "Вернуться наверх" -->
+<button id="scrollToTopBtn" class="scroll-to-top">
+    <i class="fa-solid fa-chevron-up"></i>
+</button>
+    <footer>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>

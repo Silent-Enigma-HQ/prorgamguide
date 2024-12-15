@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основы JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="animate__animated animate__fadeInDown">Основы JavaScript</h1>
+            <nav>
+                <ul class="nav">
+                    <li><a href="index.html"><i class="fa-solid fa-house-laptop"></i>Главная</a></li>
+                    <li><a href="html.html"><i class="fab fa-html5"></i> HTML</a></li>
+                    <li><a href="css.html"><i class="fab fa-css3-alt"></i> CSS</a></li>
+                    <li class="active"><a href="javascript.html"><i class="fab fa-js-square"></i> JavaScript</a></li>
+                    <li><a href="python.html"><i class="fab fa-python"></i> Python</a></li>
+                    <li><a href="examples.html"><i class="fas fa-code"></i> Примеры</a></li>
+                    <li><a href="about.html"><i class="fa-solid fa-user"></i> Об авторе</a></li>
+                </ul>
+            </nav> 
+        </div>
+    </header>
+    <main class="container">
+        <section>
+            <h2>Что такое JavaScript?</h2>
+            <p>JavaScript — это язык программирования для добавления интерактивности на веб-страницы. Он используется для создания динамичных сайтов, а также для разработки веб-приложений и серверных решений.</p>
+        </section>
+
+        <section>
+            <h2>Пример программы</h2>
+            <pre>
+
+let name = "Мир";
+console.log("Привет, " + name + "!");
+
+            </pre>
+        </section>
+
+        <section>
+            <h2>Основные понятия и синтаксис</h2>
+            <h3>Переменные и типы данных</h3>
+            <p>Переменные в JavaScript могут быть объявлены с помощью <code>var</code>, <code>let</code> или <code>const</code>. Типы данных включают числа, строки, булевы значения, массивы и объекты.</p>
+            
+            <h3>Операторы</h3>
+            <p>JavaScript поддерживает арифметические, логические и условные операторы. Например, для сравнения можно использовать операторы <code>==</code> и <code>===</code>.</p>
+        </section>
+
+        <section>
+            <h2>Функции</h2>
+            <p>Функции — это блоки кода, которые выполняют определенную задачу. Они могут принимать параметры и возвращать значения. Например:</p>
+            <pre>
+
+function greet(name) {
+    return "Привет, " + name + "!";
+}
+console.log(greet("Мир"));
+
+            </pre>
+        </section>
+
+        <section>
+            <h2>Массивы и объекты</h2>
+            <p>Массивы используются для хранения упорядоченных данных, а объекты — для хранения данных в виде пар "ключ-значение".</p>
+            <pre>
+
+let array = [1, 2, 3];
+let obj = { name: "JavaScript", type: "программирование" };
+
+            </pre>
+        </section>
+
+        <section>
+            <h2>Работа с DOM</h2>
+            <p>Document Object Model (DOM) позволяет взаимодействовать с HTML-страницей через JavaScript. С помощью DOM можно изменять элементы страницы, добавлять события и анимации.</p>
+        </section>
+
+        <section>
+            <h2>Асинхронность в JavaScript</h2>
+            <p>Для работы с асинхронными операциями, такими как загрузка данных, используются callback-функции, промисы и синтаксис <code>async/await</code>.</p>
+            <pre>
+
+async function fetchData() {
+    let response = await fetch('https://api.example.com');
+    let data = await response.json();
+    console.log(data);
+}
+
+            </pre>
+        </section>
+
+        <section>
+            <h2>Советы для новичков</h2>
+            <ul>
+                <li>Пишите код регулярно, чтобы улучшать свои навыки.</li>
+                <li>Читайте документацию и примеры на MDN.</li>
+                <li>Не бойтесь ошибаться — ошибки помогают учиться.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Дополнительные ресурсы</h2>
+            <p>Для дальнейшего изучения JavaScript используйте следующие ресурсы:</p>
+            <ul>
+                <li><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript">MDN Web Docs</a></li>
+                <li><a href="https://www.codewars.com/">Codewars</a></li>
+                <li><a href="https://www.freecodecamp.org/">freeCodeCamp</a></li>
+            </ul>
+        </section>
+    </main>
+    <div class="back-button">
+        <a href="index.html"><button>На Главную</button></a>
+    </div>
+    <!-- Кнопка "Вернуться наверх" -->
+    <button id="scrollToTopBtn" class="scroll-to-top">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+    <footer>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>
